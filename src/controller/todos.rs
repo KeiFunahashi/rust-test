@@ -24,11 +24,20 @@ pub struct DeletetodosRequest {
 pub async fn get_todos() -> impl IntoResponse {
     (
         StatusCode::OK,
-        Json(json!([{
-            "id": 1,
-            "title": "test",
-            "isCompleted": false,
-        }]))
+        Json(json!(
+            [
+                {
+                    "id": 1,
+                    "title": "test",
+                    "isCompleted": false,
+                },
+                {
+                    "id": 2,
+                    "title": "test",
+                    "isCompleted": false,
+                }
+            ]
+        ))
     )
 }
 
